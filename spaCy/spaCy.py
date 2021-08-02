@@ -1,6 +1,8 @@
 import spacy
 from spacy.symbols import ORTH, NORM
 
+# Get a guess where user want to fly
+
 nlp = spacy.load('en_core_web_md')
 special_case = [{ORTH: 'Frisco', NORM: 'San Francisco'}]
 nlp.tokenizer.add_special_case(u'Frisco', special_case)
